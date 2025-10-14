@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="./">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Pierre Paranque - Finance Director & Digital Transformation Expert</title>
+  <meta name="description" content="Senior Finance Executive (16+ years, FMCG). Expert in finance automation, digital transformation, and operational excellence. Available for Finance Director and consulting roles." />
+  <meta name="keywords" content="Finance Director, CFO, Financial Consultant, Digital Transformation, Finance Automation, FMCG Finance, Business Controller" />
+  <meta name="author" content="Pierre Paranque" />
+  <link rel="canonical" href="https://pierreparanque.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pierreparanque.github.io/" />
+  <meta property="og:title" content="Pierre Paranque - Finance Director & Digital Transformation Expert" />
+  <meta property="og:description" content="Finance leader turning finance into a strategic growth engine. Automation, BI, and operational excellence." />
+  <meta property="og:image" content="assets/images/hero.webp" />
+  <meta property="og:site_name" content="Pierre Paranque" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pierre Paranque - Finance Director & Digital Transformation Expert" />
+  <meta name="twitter:description" content="Finance leader turning finance into a strategic growth engine. Automation, BI, and operational excellence." />
+  <meta name="twitter:image" content="assets/images/hero.webp" />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-192.png" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Fonts (preconnect + preload hero image) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/images/hero.webp" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#2563EB',
+            'ink': '#0F172A',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- ECharts -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js" defer></script>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pierre Paranque",
+    "jobTitle": "Finance Director & Digital Transformation Expert",
+    "description": "Senior Finance Executive with 16+ years in FMCG; specializing in automation and digital transformation.",
+    "url": "https://pierreparanque.github.io/",
+    "image": "https://pierreparanque.github.io/assets/images/hero.webp",
+    "email": "mailto:pierre.paranque@proton.me",
+    "telephone": "+33698765432",
+    "address": { "@type": "PostalAddress", "addressLocality": "South of France", "addressCountry": "FR" },
+    "sameAs": ["https://www.linkedin.com/in/pierreparanque","https://github.com/pierreparanque"]
+  }
+  </script>
+
+  <!-- CSS (a few critical utilities only) -->
+  <style>
+    .animated-gradient::before{
+      content:"";position:absolute;inset:0;z-index:0;filter:blur(60px);opacity:.3;
+      background:
+        radial-gradient(40% 40% at 20% 20%, #60a5fa 0%, transparent 60%),
+        radial-gradient(40% 40% at 80% 30%, #a78bfa 0%, transparent 60%),
+        radial-gradient(40% 40% at 50% 80%, #34d399 0%, transparent 60%);
+      animation: float 18s ease-in-out infinite alternate;
+    }
+    @keyframes float{0%{transform:translateY(0)}100%{transform:translateY(-20px)}}
+    .fade-up{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+    .fade-up.is-visible{opacity:1;transform:translateY(0)}
+    .parallax{transform:translateY(var(--py,0))}
+    .progress{position:fixed;top:0;left:0;height:3px;background:#2563EB;width:0;z-index:60}
+    .nav-active{color:#2563EB !important}
+    .modal-bg{background:rgba(0,0,0,.5)}
+  </style>
+
+  <!-- Analytics (pick one). Replace placeholders: -->
+  <!-- GA4 (optional)
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-XXXXXXXXXX');
+  </script> -->
+
+  <!-- Plausible (optional - simple, privacy friendly) -->
+  <!-- <script defer data-domain="pierreparanque.github.io" src="https://plausible.io/js/script.js"></script> -->
+
+  <!-- LinkedIn Insight Tag (replace with your partner id) -->
+  <!--
+  <script type="text/javascript">
+    _linkedin_partner_id = "XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/javascript">
+    (function(l) {
+      if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};window.lintrk.q=[]}
+      var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript"; b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);
+    })(window.lintrk);
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt=""
+      src="https://px.ads.linkedin.com/collect/?pid=XXXXXXX&fmt=gif" />
+  </noscript>
+  -->
+</head>
+
+<body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+  <!-- Scroll progress -->
+  <div id="progress" class="progress"></div>
+
+  <!-- Header / Nav -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-white/80 dark:bg-slate-900/70 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="h-16 flex items-center justify-between">
+        <a href="#hero" class="flex items-center space-x-3">
+          <img src="assets/images/logo-pp.svg" alt="PP" class="w-9 h-9" />
+          <span class="font-bold text-primary">Pierre Paranque</span>
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-6 font-medium">
+          <a data-nav="about" href="#about" class="hover:text-primary">About</a>
+          <a data-nav="skills" href="#skills" class="hover:text-primary">Skills</a>
+          <a data-nav="experience" href="#experience" class="hover:text-primary">Experience</a>
+          <a data-nav="projects" href="#projects" class="hover:text-primary">Projects</a>
+          <a data-nav="services" href="#services" class="hover:text-primary">Services</a>
+          <a data-nav="insights" href="#insights" class="hover:text-primary">Insights</a>
+          <a data-nav="contact" href="#contact" class="hover:text-primary">Contact</a>
+        </nav>
+
+        <div class="flex items-center space-x-2">
+          <button id="langToggle" class="px-2 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 text-sm">🇫🇷 FR</button>
+          <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+            <span id="themeIcon">🌙</span>
+          </button>
+          <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800">☰</button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden pb-3">
+        <div class="grid gap-1 font-medium">
+          <a data-nav="about" href="#about" class="px-3 py-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+          <a data-nav="skills" href="#skills" class="px-3 py-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Skills</a>
+          <a data-nav="experience" href="#experience" class="px-3 py-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Experience</a>
+          <a data-nav="projects" href="#projects" class="px-3 py-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a>
+          <a data-nav="services" href="#services" class="px-3 py-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Services</a>
+          <a data-nav="insights" href="#insights" class="px-3 py-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Insights</a>
+          <a data-nav="contact" href="#contact" class="px-3 py-2 rounded hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="hero" class="relative pt-24 md:pt-28">
+      <div class="absolute inset-0 animated-gradient" aria-hidden="true"></div>
+      <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div class="space-y-6 fade-up">
+            <h1 class="font-display text-5xl md:text-6xl font-bold">Pierre Paranque</h1>
+            <p class="text-2xl text-primary font-semibold" data-i18n="hero.subtitle">Finance Director & Digital Transformation Expert</p>
+            <p class="italic text-lg" data-i18n="hero.tagline">"Turning Finance into a Strategic Growth Engine."</p>
+            <p class="text-xl opacity-90" data-i18n="hero.description">
+              Senior Finance Executive with 16+ years driving digital transformation and operational excellence in the FMCG sector.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#contact" class="px-7 py-4 rounded-lg bg-primary text-white font-semibold hover:shadow-lg transition" data-i18n="cta.work">Work With Me</a>
+              <button id="downloadCV" class="px-7 py-4 rounded-lg border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition flex items-center gap-2">
+                <span>⬇</span> <span data-i18n="cta.cv">Download Resume</span>
+              </button>
+            </div>
+            <div class="flex gap-6 text-sm opacity-80">
+              <span>📍 <span data-i18n="hero.location">South of France</span></span>
+              <span>🌍 <span data-i18n="hero.availability">Remote & On-site</span></span>
+            </div>
+            <div class="flex gap-4">
+              <a class="underline" href="https://www.linkedin.com/in/pierreparanque" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="underline" href="https://calendly.com/pierreparanque" target="_blank" rel="noopener">Calendly</a>
+            </div>
+          </div>
+          <div class="fade-up parallax">
+            <img src="assets/images/hero.webp" alt="Pierre Paranque" width="800" height="600" class="rounded-2xl shadow-2xl w-full h-auto" loading="eager" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20">
+      <div class="max-w-5xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 fade-up">
+          <h2 class="font-display text-4xl md:text-5xl font-bold" data-i18n="about.title">Executive Summary</h2>
+          <p class="text-xl opacity-80" data-i18n="about.subtitle">Driving Financial Excellence Through Digital Innovation</p>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-6 mb-10">
+          <div class="text-center fade-up">
+            <div class="text-4xl font-extrabold text-primary">16+</div>
+            <div class="opacity-80" data-i18n="about.years">Years Experience</div>
+          </div>
+          <div class="text-center fade-up">
+            <div class="text-4xl font-extrabold text-primary">3</div>
+            <div class="opacity-80" data-i18n="about.langs">Languages</div>
+          </div>
+          <div class="text-center fade-up">
+            <div class="text-4xl font-extrabold text-primary">Multi</div>
+            <div class="opacity-80" data-i18n="about.countries">Country Operations</div>
+          </div>
+        </div>
+        <div class="space-y-6 text-lg opacity-90 fade-up">
+          <p data-i18n="about.p1">Throughout my 16-year journey in finance, I've seen technology transform entire business trajectories. I build the financial infrastructure that enables scale and innovation.</p>
+          <p data-i18n="about.p2">From automation that saves thousands of hours to BI that democratizes insights, finance should be a strategic partner—not just a historical record.</p>
+          <p data-i18n="about.p3">Whether optimizing processes or reimagining operations, I help turn finance into competitive advantage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-800/40">
+      <div class="max-w-6xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 fade-up">
+          <h2 class="font-display text-4xl md:text-5xl font-bold" data-i18n="skills.title">Technical Expertise</h2>
+          <p class="text-xl opacity-80" data-i18n="skills.subtitle">Mastering the Tools of Modern Finance</p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div class="fade-up"><div id="skillsRadar" class="w-full h-96"></div></div>
+          <div class="grid gap-6 fade-up">
+            <!-- simple progress bars -->
+            <div>
+              <div class="flex justify-between mb-2"><h3 class="font-semibold">Excel & Power Query</h3><span>95%</span></div>
+              <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded"><div class="h-2 bg-primary rounded" style="width:95%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><h3 class="font-semibold">Power BI</h3><span>90%</span></div>
+              <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded"><div class="h-2 bg-primary rounded" style="width:90%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><h3 class="font-semibold">SAP & Oracle Financials</h3><span>85%</span></div>
+              <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded"><div class="h-2 bg-primary rounded" style="width:85%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><h3 class="font-semibold">VBA & Automation</h3><span>80%</span></div>
+              <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded"><div class="h-2 bg-primary rounded" style="width:80%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 fade-up">
+          <h2 class="font-display text-4xl md:text-5xl font-bold" data-i18n="exp.title">Career Journey</h2>
+          <p class="text-xl opacity-80" data-i18n="exp.subtitle">16 Years of Financial Excellence</p>
+        </div>
+        <div class="grid gap-6">
+          <!-- Two most recent roles; tuned to your resume -->
+          <div class="p-6 rounded-xl bg-white dark:bg-slate-800 shadow fade-up">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-xl font-bold">Business Controller</h3>
+                <p class="text-primary font-medium">JDE Peet's</p>
+              </div>
+              <span class="opacity-70">2022 – Present</span>
+            </div>
+            <ul class="mt-3 space-y-2 opacity-90">
+              <li>• P&L optimization program delivering ~€2M annual savings</li>
+              <li>• Built Power BI suite for real-time margin & promo ROI</li>
+              <li>• Business partnering across sales & supply chain; team lead (2)</li>
+            </ul>
+          </div>
+
+          <div class="p-6 rounded-xl bg-white dark:bg-slate-800 shadow fade-up">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-xl font-bold">Credit Manager</h3>
+                <p class="text-primary font-medium">JDE Peet's</p>
+              </div>
+              <span class="opacity-70">2019 – 2022</span>
+            </div>
+            <ul class="mt-3 space-y-2 opacity-90">
+              <li>• DSO improvement: -15 days via automation & policy redesign</li>
+              <li>• Implemented risk scoring, dunning & dispute workflows</li>
+              <li>• Managed team of 4; cross-country harmonization</li>
+            </ul>
+          </div>
+
+          <div class="p-6 rounded-xl bg-white dark:bg-slate-800 shadow fade-up">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-xl font-bold">Finance Business Partner</h3>
+                <p class="text-primary font-medium">International FMCG Leader</p>
+              </div>
+              <span class="opacity-70">2015 – 2018</span>
+            </div>
+            <ul class="mt-3 space-y-2 opacity-90">
+              <li>• Cost optimization program: ~€2M YOY savings</li>
+              <li>• Automated forecasting & monthly performance pack</li>
+              <li>• Led cross-functional teams across 3 countries</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-20 bg-slate-50 dark:bg-slate-800/40">
+      <div class="max-w-6xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 fade-up">
+          <h2 class="font-display text-4xl md:text-5xl font-bold" data-i18n="projects.title">Key Achievements</h2>
+          <p class="text-xl opacity-80" data-i18n="projects.subtitle">Transformative Projects & Impact</p>
+        </div>
+
+        <div id="projectsGrid" class="grid md:grid-cols-2 gap-8 fade-up"></div>
+
+        <!-- Lead magnet -->
+        <div class="mt-12 p-8 rounded-2xl bg-gradient-to-r from-primary to-indigo-600 text-white text-center fade-up">
+          <h3 class="text-2xl font-bold mb-2" data-i18n="projects.checklistTitle">10-Point Finance Transformation Checklist</h3>
+          <p class="opacity-90 mb-6" data-i18n="projects.checklistSub">Essential steps to modernize your finance operations</p>
+          <a href="assets/pdf/checklist.pdf" download class="px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:bg-slate-100 inline-block" data-i18n="projects.downloadChecklist">Download Free Checklist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 fade-up">
+          <h2 class="font-display text-4xl md:text-5xl font-bold" data-i18n="services.title">Consulting Services</h2>
+          <p class="text-xl opacity-80" data-i18n="services.subtitle">Transform Your Finance Function</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-xl bg-white dark:bg-slate-800 shadow hover:shadow-lg transition fade-up">
+            <div class="w-14 h-14 rounded-xl bg-blue-100 dark:bg-blue-900 flex items-center justify-center mb-5">💼</div>
+            <h3 class="text-xl font-bold" data-i18n="services.s1.title">Financial Performance</h3>
+            <p class="opacity-90 my-4" data-i18n="services.s1.desc">Optimize processes, improve cost control, and drive profitability via data-driven insights.</p>
+            <div class="text-primary font-semibold" data-i18n="services.s1.price">From €2,500/month</div>
+          </div>
+
+          <div class="p-8 rounded-xl bg-white dark:bg-slate-800 shadow hover:shadow-lg transition fade-up">
+            <div class="w-14 h-14 rounded-xl bg-blue-100 dark:bg-blue-900 flex items-center justify-center mb-5"⚙️</div>
+            <h3 class="text-xl font-bold" data-i18n="services.s2.title">Process Automation</h3>
+            <p class="opacity-90 my-4" data-i18n="services.s2.desc">Cut manual work and errors with Excel/VBA, Power Query, Power BI, and workflow tooling.</p>
+            <div class="text-primary font-semibold" data-i18n="services.s2.price">From €3,000/project</div>
+          </div>
+
+          <div class="p-8 rounded-xl bg-white dark:bg-slate-800 shadow hover:shadow-lg transition fade-up">
+            <div class="w-14 h-14 rounded-xl bg-blue-100 dark:bg-blue-900 flex items-center justify-center mb-5">🚀</div>
+            <h3 class="text-xl font-bold" data-i18n="services.s3.title">Digital Transformation</h3>
+            <p class="opacity-90 my-4" data-i18n="services.s3.desc">Modernize finance with cloud, BI, automation, and change management.</p>
+            <div class="text-primary font-semibold" data-i18n="services.s3.price">Custom Pricing</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIGHTS (Blog) + Newsletter -->
+    <section id="insights" class="py-20 bg-slate-50 dark:bg-slate-800/40">
+      <div class="max-w-6xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 fade-up">
+          <h2 class="font-display text-4xl md:text-5xl font-bold" data-i18n="insights.title">Latest Insights</h2>
+          <p class="text-xl opacity-80" data-i18n="insights.subtitle">Finance, Technology & Leadership</p>
+        </div>
+
+        <div id="postsGrid" class="grid md:grid-cols-3 gap-8 mb-12 fade-up"></div>
+
+        <!-- Newsletter -->
+        <div class="p-8 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 border border-blue-200 dark:border-blue-800 fade-up">
+          <div class="max-w-2xl mx-auto text-center">
+            <h3 class="text-2xl font-bold" data-i18n="news.title">Stay Updated</h3>
+            <p class="opacity-90 mb-6" data-i18n="news.subtitle">Get monthly insights on finance automation & digital transformation</p>
+            <form id="newsletterForm" class="flex flex-col sm:flex-row gap-3 justify-center">
+              <input type="email" required id="newsletterEmail" class="flex-1 px-4 py-3 rounded-lg border dark:border-slate-600 dark:bg-slate-700" placeholder="your@email.com" />
+              <button class="px-6 py-3 rounded-lg bg-primary text-white font-semibold hover:opacity-90" data-i18n="news.button">Subscribe</button>
+            </form>
+            <p id="newsletterMsg" class="mt-3 text-sm"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (+ Calendly inline) -->
+    <section id="contact" class="py-20">
+      <div class="max-w-5xl mx-auto px-4 md:px-6">
+        <div class="text-center mb-12 fade-up">
+          <h2 class="font-display text-4xl md:text-5xl font-bold" data-i18n="contact.title">Let's Connect</h2>
+          <p class="text-xl opacity-80" data-i18n="contact.subtitle">Ready to transform your finance function? Let’s discuss your goals.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="space-y-5 fade-up">
+            <div>📧 <span class="font-medium">Email:</span> <a href="mailto:pierre.paranque@proton.me" class="underline">pierre.paranque@proton.me</a></div>
+            <div>📞 <span class="font-medium">Phone:</span> <a href="tel:+33698765432" class="underline">+33 6 98 76 54 32</a></div>
+            <div>📍 <span class="font-medium" data-i18n="hero.location">South of France</span></div>
+            <div>🌍 <span class="font-medium" data-i18n="hero.availability">Remote & On-site</span></div>
+
+            <!-- Calendly inline embed -->
+            <div class="mt-6">
+              <h3 class="text-xl font-bold mb-2" data-i18n="contact.calendlyTitle">Schedule a call</h3>
+              <div class="calendly-inline-widget" data-url="https://calendly.com/pierreparanque" style="min-width:320px;height:540px;"></div>
+              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </div>
+          </div>
+
+          <div class="fade-up">
+            <!-- Netlify Forms: add data-netlify + name ; OR Formspree action -->
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="grid gap-4 p-6 rounded-xl bg-white dark:bg-slate-800 shadow">
+              <input type="hidden" name="form-name" value="contact" />
+              <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
+              <input name="name" required placeholder="Full Name" class="px-4 py-3 rounded-lg border dark:border-slate-600 dark:bg-slate-700" />
+              <input type="email" name="email" required placeholder="Email Address" class="px-4 py-3 rounded-lg border dark:border-slate-600 dark:bg-slate-700" />
+              <input name="company" placeholder="Company" class="px-4 py-3 rounded-lg border dark:border-slate-600 dark:bg-slate-700" />
+              <select name="service" class="px-4 py-3 rounded-lg border dark:border-slate-600 dark:bg-slate-700">
+                <option value="performance">Financial Performance</option>
+                <option value="automation">Process Automation</option>
+                <option value="transformation">Digital Transformation</option>
+                <option value="director">Finance Director Role</option>
+                <option value="other">Other</option>
+              </select>
+              <textarea name="message" required rows="4" placeholder="Tell me about your project or role..." class="px-4 py-3 rounded-lg border dark:border-slate-600 dark:bg-slate-700"></textarea>
+              <button class="px-6 py-3 rounded-lg bg-primary text-white font-semibold hover:opacity-90" data-i18n="contact.send">Send Message</button>
+              <p id="contactMsg" class="text-sm"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 text-center">
+      <img src="assets/images/logo-pp.svg" alt="PP" class="mx-auto w-10 h-10 mb-3 opacity-80" />
+      <div class="font-display text-2xl font-bold text-primary mb-2">Pierre Paranque</div>
+      <p class="opacity-80" data-i18n="footer.tagline">Finance Director & Digital Transformation Expert</p>
+      <p class="opacity-60 text-sm mt-4">© 2024 Pierre Paranque. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      <p class="opacity-60 text-xs mt-1"><span data-i18n="footer.updated">Last updated</span>: <span id="lastUpdated"></span></p>
+    </div>
+  </footer>
+
+  <!-- Floating CTA + Back to top -->
+  <button id="ctaFloat" class="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-full bg-gradient-to-r from-primary to-indigo-600 text-white font-semibold shadow-lg hidden">
+    ✉️ <span class="ml-2" data-i18n="cta.work">Work With Me</span>
+  </button>
+  <button id="toTop" aria-label="Back to top" class="fixed bottom-6 right-28 z-50 p-3 rounded-full bg-slate-800 text-white shadow-lg hidden">↑</button>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="fixed inset-0 hidden items-center justify-center z-50">
+    <div class="absolute inset-0 modal-bg"></div>
+    <div class="relative bg-white dark:bg-slate-800 rounded-2xl p-6 w-full max-w-md shadow-xl">
+      <button id="closeModal" class="absolute top-3 right-3 p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700">✕</button>
+      <h3 class="text-2xl font-bold mb-4" data-i18n="contact.title">Let's Connect</h3>
+      <form id="modalForm" class="grid gap-3">
+        <input name="name" required placeholder="Full Name" class="px-4 py-3 rounded-lg border dark:border-slate-600 dark:bg-slate-700" />
+        <input type="email" name="email" required placeholder="Email Address" class="px-4 py-3 rounded-lg border dark:border-slate-600 dark:bg-slate-700" />
+        <textarea name="message" rows="4" placeholder="Message" class="px-4 py-3 rounded-lg border dark:border-slate-600 dark:bg-slate-700"></textarea>
+        <button class="px-6 py-3 rounded-lg bg-primary text-white font-semibold hover:opacity-90" data-i18n="contact.send">Send Message</button>
+      </form>
+      <p id="modalMsg" class="mt-2 text-sm"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // --- i18n strings ---
+    const i18n = {
+      en: {
+        "hero.subtitle":"Finance Director & Digital Transformation Expert",
+        "hero.tagline":"\"Turning Finance into a Strategic Growth Engine.\"",
+        "hero.description":"Senior Finance Executive with 16+ years driving digital transformation and operational excellence in the FMCG sector.",
+        "hero.location":"South of France",
+        "hero.availability":"Remote & On-site",
+        "cta.work":"Work With Me",
+        "cta.cv":"Download Resume",
+
+        "about.title":"Executive Summary",
+        "about.subtitle":"Driving Financial Excellence Through Digital Innovation",
+        "about.years":"Years Experience",
+        "about.langs":"Languages",
+        "about.countries":"Country Operations",
+        "about.p1":"Throughout my 16-year journey in finance, I've seen technology transform entire business trajectories. I build the financial infrastructure that enables scale and innovation.",
+        "about.p2":"From automation that saves thousands of hours to BI that democratizes insights, finance should be a strategic partner—not just a historical record.",
+        "about.p3":"Whether optimizing processes or reimagining operations, I help turn finance into competitive advantage.",
+
+        "skills.title":"Technical Expertise",
+        "skills.subtitle":"Mastering the Tools of Modern Finance",
+
+        "exp.title":"Career Journey",
+        "exp.subtitle":"16 Years of Financial Excellence",
+
+        "projects.title":"Key Achievements",
+        "projects.subtitle":"Transformative Projects & Impact",
+        "projects.checklistTitle":"10-Point Finance Transformation Checklist",
+        "projects.checklistSub":"Essential steps to modernize your finance operations",
+        "projects.downloadChecklist":"Download Free Checklist",
+
+        "services.title":"Consulting Services",
+        "services.subtitle":"Transform Your Finance Function",
+        "services.s1.title":"Financial Performance",
+        "services.s1.desc":"Optimize processes, improve cost control, and drive profitability via data-driven insights.",
+        "services.s1.price":"From €2,500/month",
+        "services.s2.title":"Process Automation",
+        "services.s2.desc":"Cut manual work and errors with Excel/VBA, Power Query, Power BI, and workflow tooling.",
+        "services.s2.price":"From €3,000/project",
+        "services.s3.title":"Digital Transformation",
+        "services.s3.desc":"Modernize finance with cloud, BI, automation, and change management.",
+        "services.s3.price":"Custom Pricing",
+
+        "insights.title":"Latest Insights",
+        "insights.subtitle":"Finance, Technology & Leadership",
+        "insights.readMore":"Read More",
+
+        "news.title":"Stay Updated",
+        "news.subtitle":"Get monthly insights on finance automation & digital transformation",
+        "news.button":"Subscribe",
+        "news.success":"Successfully subscribed!",
+
+        "contact.title":"Let's Connect",
+        "contact.subtitle":"Ready to transform your finance function? Let’s discuss your goals.",
+        "contact.send":"Send Message",
+        "contact.calendlyTitle":"Schedule a call",
+
+        "footer.tagline":"Finance Director & Digital Transformation Expert",
+        "footer.rights":"All rights reserved.",
+        "footer.updated":"Last updated"
+      },
+      fr: {
+        "hero.subtitle":"Directeur Financier & Expert en Transformation Digitale",
+        "hero.tagline":"\"Transformer la Finance en Moteur de Croissance Stratégique.\"",
+        "hero.description":"Cadre financier senior avec 16+ ans d'expérience dans la transformation digitale et l'excellence opérationnelle (FMCG).",
+        "hero.location":"Sud de la France",
+        "hero.availability":"À distance & Sur site",
+        "cta.work":"Travaillons Ensemble",
+        "cta.cv":"Télécharger le CV",
+
+        "about.title":"Résumé Exécutif",
+        "about.subtitle":"Piloter l'Excellence Financière par l'Innovation Digitale",
+        "about.years":"Années d'Expérience",
+        "about.langs":"Langues",
+        "about.countries":"Opérations Multi-Pays",
+        "about.p1":"Au cours de mes 16 années en finance, j'ai vu la technologie transformer des trajectoires d'entreprise entières. Je construis l'infrastructure financière qui permet la croissance et l'innovation.",
+        "about.p2":"De l'automatisation qui économise des milliers d'heures au BI qui démocratise les insights, la finance doit être un partenaire stratégique—pas seulement un archiviste.",
+        "about.p3":"Qu'il s'agisse d'optimiser les processus ou de réimaginer les opérations, je transforme la fonction finance en avantage concurrentiel.",
+
+        "skills.title":"Expertise Technique",
+        "skills.subtitle":"Maîtrise des Outils de la Finance Moderne",
+
+        "exp.title":"Parcours Professionnel",
+        "exp.subtitle":"16 Ans d'Excellence Financière",
+
+        "projects.title":"Réalisations Clés",
+        "projects.subtitle":"Projets Transformateurs & Impact",
+        "projects.checklistTitle":"Checklist en 10 Points pour la Transformation Financière",
+        "projects.checklistSub":"Étapes essentielles pour moderniser vos opérations financières",
+        "projects.downloadChecklist":"Télécharger la Checklist",
+
+        "services.title":"Services de Conseil",
+        "services.subtitle":"Transformez Votre Fonction Finance",
+        "services.s1.title":"Performance Financière",
+        "services.s1.desc":"Optimisez vos processus, améliorez le contrôle des coûts et stimulez la rentabilité grâce aux données.",
+        "services.s1.price":"À partir de 2 500 €/mois",
+        "services.s2.title":"Automatisation des Processus",
+        "services.s2.desc":"Réduisez le travail manuel avec Excel/VBA, Power Query, Power BI et des workflows robustes.",
+        "services.s2.price":"À partir de 3 000 €/projet",
+        "services.s3.title":"Transformation Digitale",
+        "services.s3.desc":"Modernisez la finance avec le cloud, le BI, l'automatisation et la conduite du changement.",
+        "services.s3.price":"Tarification personnalisée",
+
+        "insights.title":"Derniers Articles",
+        "insights.subtitle":"Finance, Technologie & Leadership",
+        "insights.readMore":"Lire plus",
+
+        "news.title":"Restez Informé",
+        "news.subtitle":"Recevez chaque mois des contenus sur l'automatisation financière et la transformation digitale",
+        "news.button":"S'abonner",
+        "news.success":"Abonnement réussi !",
+
+        "contact.title":"Connectons-nous",
+        "contact.subtitle":"Prêt à transformer votre fonction finance ? Discutons de vos objectifs.",
+        "contact.send":"Envoyer",
+        "contact.calendlyTitle":"Planifier un appel",
+
+        "footer.tagline":"Directeur Financier & Expert en Transformation Digitale",
+        "footer.rights":"Tous droits réservés.",
+        "footer.updated":"Dernière mise à jour"
+      }
+    };
+
+    // --- state & helpers ---
+    const $ = s => document.querySelector(s);
+    const $$ = s => Array.from(document.querySelectorAll(s));
+    const setLang = lang => {
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang;
+      // swap text
+      $$("[data-i18n]").forEach(el=>{
+        const key = el.getAttribute("data-i18n");
+        if(i18n[lang][key]) el.textContent = i18n[lang][key];
+      });
+      // toggle button label
+      $('#langToggle').textContent = lang==='en' ? '🇫🇷 FR' : '🇬🇧 EN';
+    };
+
+    // --- init on DOM ready ---
+    document.addEventListener('DOMContentLoaded', () => {
+      // theme
+      const savedTheme = localStorage.getItem('theme');
+      if(savedTheme==='dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+        document.documentElement.classList.add('dark');
+        $('#themeIcon').textContent='☀️';
+      }
+
+      // language (auto-detect)
+      const saved = localStorage.getItem('lang');
+      const browser = (navigator.language || 'en').slice(0,2);
+      const lang = saved || (browser==='fr'?'fr':'en');
+      setLang(lang);
+
+      // progress bar
+      const progress = $('#progress');
+      const onScroll = () => {
+        const h = document.documentElement;
+        const sc = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+        progress.style.width = sc + '%';
+
+        // floating buttons
+        $('#ctaFloat').classList.toggle('hidden', h.scrollTop < 300);
+        $('#toTop').classList.toggle('hidden', h.scrollTop < 500);
+
+        // parallax
+        $$('.parallax').forEach(el => {
+          el.style.setProperty('--py', (h.scrollTop * 0.03)+'px');
+        });
+
+        // scroll spy
+        const sections = ['about','skills','experience','projects','services','insights','contact'];
+        let current=null;
+        for(const id of sections){
+          const el = document.getElementById(id);
+          if(!el) continue;
+          const r = el.getBoundingClientRect();
+          if(r.top <= 140 && r.bottom >= 140){ current=id; break; }
+        }
+        if(current){
+          $$('a[data-nav]').forEach(a=>a.classList.remove('nav-active'));
+          $$(`a[data-nav="${current}"]`).forEach(a=>a.classList.add('nav-active'));
+        }
+      };
+      document.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+
+      // fade-in observer
+      const io=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target)} });
+      },{threshold:0.12, rootMargin:'0px 0px -50px 0px'});
+      $$('.fade-up').forEach(el=>io.observe(el));
+
+      // theme toggle
+      $('#themeToggle').addEventListener('click', ()=>{
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark?'dark':'light');
+        $('#themeIcon').textContent = isDark ? '☀️' : '🌙';
+      });
+
+      // lang toggle
+      $('#langToggle').addEventListener('click', ()=>{
+        setLang(document.documentElement.lang==='en'?'fr':'en');
+      });
+
+      // mobile menu
+      $('#menuBtn').addEventListener('click', ()=>$('#mobileMenu').classList.toggle('hidden'));
+
+      // back to top
+      $('#toTop').addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+      // floating CTA -> open modal
+      $('#ctaFloat').addEventListener('click', ()=>openModal());
+
+      // contact modal
+      $('#closeModal').addEventListener('click', closeModal);
+      $('#contactModal').addEventListener('click', (e)=>{ if(e.target.id==='contactModal') closeModal(); });
+
+      // CV download counter
+      const key='cvDownloads';
+      let count = parseInt(localStorage.getItem(key)||'0',10);
+      $('#downloadCV').addEventListener('click', ()=>{
+        count++; localStorage.setItem(key, String(count));
+        const a = document.createElement('a');
+        a.href='assets/pdf/Pierre_Paranque_CV.pdf';
+        a.download = 'Pierre_Paranque_CV.pdf';
+        a.click();
+      });
+
+      // last updated
+      $('#lastUpdated').textContent = new Date().toLocaleDateString(document.documentElement.lang==='fr'?'fr-FR':'en-US');
+
+      // projects
+      const projects = [
+        { titleEN:'Month-End Close Automation', titleFR:'Automatisation Clôture Mensuelle',
+          descEN:'Reduced close time by 40% using Power BI & automated workflows.',
+          descFR:'Réduction de 40% du délai de clôture grâce à Power BI & workflows automatisés.',
+          impactEN:'40% faster', impactFR:'40% plus rapide',
+          tech:['Power BI','Power Query','VBA','SAP'], savings:'€500K / year' },
+        { titleEN:'DSO Optimization Program', titleFR:'Programme Optimisation DSO',
+          descEN:'Automated credit management reducing DSO by 15 days.',
+          descFR:'Gestion de crédit automatisée réduisant le DSO de 15 jours.',
+          impactEN:'-15 days DSO', impactFR:'-15 jours DSO',
+          tech:['SAP','Power Automate','Excel'], savings:'€2M cash flow' },
+        { titleEN:'Supply Chain Cost Analytics', titleFR:'Analyse Coûts Supply Chain',
+          descEN:'Logistics dashboard identified €1.5M optimization.',
+          descFR:'Tableau de bord logistique : 1,5 M€ d’optimisation.',
+          impactEN:'€1.5M identified', impactFR:'1,5 M€ identifiés',
+          tech:['Power BI','DAX','SQL'], savings:'€1.5M saved' },
+        { titleEN:'Financial Consolidation System', titleFR:'Système de Consolidation',
+          descEN:'Streamlined multi-entity consolidation across 3 countries (IFRS).',
+          descFR:'Consolidation multi-entités sur 3 pays (IFRS).',
+          impactEN:'3 countries', impactFR:'3 pays',
+          tech:['SAP BPC','Oracle','Excel'], savings:'60% faster reporting' }
+      ];
+      const grid = $('#projectsGrid');
+      const langNow = ()=>document.documentElement.lang;
+      const renderProjects = ()=>{
+        grid.innerHTML = projects.map(p=>`
+          <article class="p-6 rounded-xl bg-white dark:bg-slate-800 shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-bold mb-2">${langNow()==='fr'?p.titleFR:p.titleEN}</h3>
+            <p class="opacity-90 mb-4">${langNow()==='fr'?p.descFR:p.descEN}</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              ${p.tech.map(t=>`<span class="px-3 py-1 rounded-full text-sm bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">${t}</span>`).join('')}
+            </div>
+            <div class="flex items-center justify-between pt-3 border-t border-slate-200 dark:border-slate-700">
+              <div class="text-sm">
+                <div class="text-primary font-semibold">${langNow()==='fr'?p.impactFR:p.impactEN}</div>
+                <div class="opacity-70">${p.savings}</div>
+              </div>
+            </div>
+          </article>
+        `).join('');
+      };
+      renderProjects();
+      // re-render projects on language switch
+      const mo = new MutationObserver(renderProjects);
+      mo.observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+
+      // blog loader (markdown list)
+      const postsGrid = $('#postsGrid');
+      fetch('posts/index.json').then(r=>r.json()).then(list=>{
+        postsGrid.innerHTML = list.slice(0,3).map(p=>`
+          <article class="p-6 rounded-xl bg-white dark:bg-slate-800 shadow hover:shadow-lg transition">
+            <div class="text-sm opacity-70 mb-2">${p.date} • ${p.readTime}</div>
+            <h3 class="text-xl font-bold mb-2">${p.title[langNow()]||p.title.en}</h3>
+            <p class="opacity-90 mb-4">${p.excerpt[langNow()]||p.excerpt.en}</p>
+            <a class="text-primary font-semibold underline" href="posts/${p.slug}.md" target="_blank" rel="noopener">${i18n[langNow()]['insights.readMore']}</a>
+          </article>
+        `).join('');
+      }).catch(()=>{ postsGrid.innerHTML = '<p class="opacity-70">No posts yet.</p>'; });
+
+      // newsletter (MailerLite/Brevo placeholder)
+      $('#newsletterForm').addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const email = $('#newsletterEmail').value.trim();
+        const msg = $('#newsletterMsg');
+        msg.textContent = '...';
+        try{
+          // Example (MailerLite): POST https://api.mailerlite.com/api/subscribers
+          // Replace with your provider + API key using Netlify function/proxy for CORS.
+          // Here we simulate success:
+          await new Promise(res=>setTimeout(res,700));
+          msg.textContent = i18n[document.documentElement.lang]['news.success'];
+        }catch(err){
+          msg.textContent = 'Error. Please try again.';
+        }
+      });
+
+      // contact forms (modal + page) — if not using Netlify, switch to Formspree action
+      $('#contactForm').addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const msg = $('#contactMsg');
+        msg.textContent = 'Sending...';
+        try{
+          const fd = new FormData(e.target);
+          await fetch('/', { method:'POST', body: fd }); // Netlify static forms
+          msg.textContent = 'Message sent successfully!';
+          e.target.reset();
+        }catch(err){ msg.textContent = 'Error. Please try again.'; }
+      });
+
+      $('#modalForm').addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const msg = $('#modalMsg');
+        msg.textContent = 'Sending...';
+        try{
+          const fd = new FormData(e.target);
+          await fetch('/', { method:'POST', body: fd });
+          msg.textContent = 'Message sent successfully!';
+          e.target.reset();
+        }catch(err){ msg.textContent = 'Error. Please try again.'; }
+      });
+
+      // ECharts skills radar
+      const radar = echarts.init(document.getElementById('skillsRadar'));
+      radar.setOption({
+        tooltip: {},
+        radar: {
+          indicator: [
+            { name:'Excel/Power Query', max:100 },
+            { name:'Power BI', max:100 },
+            { name:'SAP', max:100 },
+            { name:'Oracle Financials', max:100 },
+            { name:'VBA', max:100 },
+            { name:'Process Automation', max:100 }
+          ],
+          splitNumber: 4
+        },
+        series: [{
+          type:'radar',
+          data:[{ value:[95,90,85,80,75,85], name:'Current Level',
+            areaStyle:{opacity:0.2}, lineStyle:{width:2} }]
+        }]
+      });
+      window.addEventListener('resize', ()=>radar.resize());
+
+      // PWA
+      if('serviceWorker' in navigator){ navigator.serviceWorker.register('service-worker.js'); }
+    });
+
+    // modal helpers
+    function openModal(){ const m=$('#contactModal'); m.classList.remove('hidden'); m.classList.add('flex'); }
+    function closeModal(){ const m=$('#contactModal'); m.classList.add('hidden'); m.classList.remove('flex'); }
+  </script>
+</body>
+</html>
